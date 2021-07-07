@@ -1,0 +1,17 @@
+{
+    "version": "2",
+    "templates": [{
+        "type": 2,
+        "title": "omneedia web server",
+        "description": "High performance web server",
+        "categories": [
+            "omneedia core packages"
+        ],
+        "platform": "linux",
+        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+        "repository": {
+            "url": "https://github.com/omneedia/templates",
+            "stackfile": "stacks/portainer-agent/docker-stack.yml"
+        }
+    }]
+}

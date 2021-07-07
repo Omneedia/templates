@@ -1,0 +1,37 @@
+template:
+  nginx:
+    image: omneedia/nginx:1.0.9
+    volumes:
+      - etc:/etc/nginx
+      - certs:/etc/certs
+      - logs:/var/log
+      - www:/var/www
+    networks:
+      - app
+      - public
+    ports:
+      - 443:443
+      - 80:80
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+  ingress:
+    image: omneedia/ingress:1.3.0
+    volumes:
+      - offline:/etc/offline
+      - certs:/etc/certs
+      - etc:/etc/nginx
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - app
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+    depends_on:
+      - nginx
