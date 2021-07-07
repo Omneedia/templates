@@ -2,6 +2,7 @@
     "version": "2",
     "templates": [{
         "type": 2,
+        "name": "omneedia-core-web",
         "title": "omneedia web server",
         "description": "Omneedia reverse proxy & ingress controller",
         "categories": [
@@ -10,7 +11,7 @@
         "platform": "linux",
         "logo": "https://omneedia.s3.fr-par.scw.cloud/logos/omneedia.png",
         "repository": {
-            "url": "https://raw.githubusercontent.com/omneedia/templates/master",
+            "url": "https://github.com/omneedia/templates",
             "stackfile": "stacks/omneedia-web/omneedia-web.yml"
         }
     }]

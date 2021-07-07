@@ -7,8 +7,7 @@ template:
       - logs:/var/log
       - www:/var/www
     networks:
-      - app
-      - public
+      - @public
     ports:
       - 443:443
       - 80:80
@@ -22,8 +21,6 @@ template:
       - certs:/etc/certs
       - etc:/etc/nginx
       - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - app
     deploy:
       replica: 1
       node: manager
