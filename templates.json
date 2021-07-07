@@ -3,15 +3,15 @@
     "templates": [{
         "type": 2,
         "title": "omneedia web server",
-        "description": "High performance web server",
+        "description": "Omneedia reverse proxy & ingress controller",
         "categories": [
             "omneedia core packages"
         ],
         "platform": "linux",
-        "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+        "logo": "https://omneedia.s3.fr-par.scw.cloud/logos/omneedia.png",
         "repository": {
-            "url": "https://github.com/omneedia/templates",
-            "stackfile": "stacks/portainer-agent/docker-stack.yml"
+            "url": "https://raw.githubusercontent.com/omneedia/templates/master",
+            "stackfile": "stacks/omneedia-web/omneedia-web.yml"
         }
     }]
 }
