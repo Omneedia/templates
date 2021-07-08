@@ -27,6 +27,7 @@
             "ports": [
                 "5000/tcp"
             ],
+            "publish": "5000",
             "volumes": [{
                 "container": "/var/lib/registry"
             }]
@@ -45,6 +46,7 @@
                 "80/tcp",
                 "443/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                     "container": "/etc/nginx"
                 },
@@ -66,6 +68,7 @@
             "ports": [
                 "80/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                 "container": "/usr/local/apache2/htdocs/"
             }]
@@ -85,6 +88,7 @@
                 "443/tcp",
                 "2015/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                 "container": "/root/.caddy"
             }]
@@ -188,6 +192,7 @@
                 "26257/tcp",
                 "8080/tcp"
             ],
+            "publish": "8080",
             "volumes": [{
                 "container": "/cockroach/cockroach-data"
             }],
@@ -246,6 +251,7 @@
                 "443/tcp",
                 "22/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                     "container": "/etc/gitlab"
                 },
@@ -270,6 +276,7 @@
             "ports": [
                 "9000/tcp"
             ],
+            "publish": "9000",
             "env": [{
                     "name": "MINIO_ACCESS_KEY",
                     "label": "Minio access key"
@@ -301,6 +308,7 @@
             "ports": [
                 "8000/tcp"
             ],
+            "publish": "8000",
             "env": [{
                     "name": "SCALITY_ACCESS_KEY",
                     "label": "Scality S3 access key"
@@ -409,6 +417,7 @@
             "ports": [
                 "8080/tcp"
             ],
+            "publish": "8080",
             "volumes": [{
                 "container": "/app/data"
             }],
@@ -427,6 +436,7 @@
             "ports": [
                 "4000/tcp"
             ],
+            "publish": "4000",
             "volumes": [{
                 "container": "/app/data"
             }],
@@ -449,6 +459,7 @@
             "ports": [
                 "8983/tcp"
             ],
+            "publish": "8983",
             "volumes": [{
                 "container": "/opt/solr/mydata"
             }]
@@ -484,6 +495,7 @@
                 "5671/tcp",
                 "5672/tcp"
             ],
+            "publish": "15672",
             "volumes": [{
                 "container": "/var/lib/rabbitmq"
             }]
@@ -502,6 +514,7 @@
             "ports": [
                 "2368/tcp"
             ],
+            "publish": "2368",
             "volumes": [{
                 "container": "/var/lib/ghost/content"
             }]
@@ -524,7 +537,8 @@
                 "8880/tcp",
                 "8443/tcp",
                 "8447/tcp"
-            ]
+            ],
+            "publish": "80"
         },
         {
             "type": 1,
@@ -549,6 +563,7 @@
             "ports": [
                 "80/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                 "container": "/var/www/html"
             }]
@@ -566,6 +581,7 @@
             "ports": [
                 "80/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                 "container": "/var/www/html"
             }]
@@ -583,6 +599,7 @@
             "ports": [
                 "8080/tcp"
             ],
+            "publish": "8080",
             "volumes": [{
                 "container": "/data"
             }]
@@ -602,6 +619,7 @@
                 "3000/tcp",
                 "3001/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                 "container": "/var/www/html/"
             }]
@@ -687,6 +705,7 @@
             "ports": [
                 "80/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                 "container": "/var/www/html"
             }]
@@ -717,6 +736,7 @@
                 "8087/tcp",
                 "8088/tcp"
             ],
+            "publish": "8088",
             "volumes": [{
                 "container": "/var/lib/wowza"
             }]
@@ -735,6 +755,7 @@
                 "8080/tcp",
                 "50000/tcp"
             ],
+            "publish": "8080",
             "env": [{
                 "name": "JENKINS_OPTS",
                 "label": "Jenkins options"
@@ -756,6 +777,7 @@
             "ports": [
                 "3000/tcp"
             ],
+            "publish": "3000",
             "volumes": [{
                 "container": "/usr/src/redmine/files"
             }]
@@ -787,6 +809,7 @@
             "ports": [
                 "8069/tcp"
             ],
+            "publish": "8069",
             "volumes": [{
                     "container": "/var/lib/odoo"
                 },
@@ -812,6 +835,7 @@
                 "55415/tcp",
                 "35622/tcp"
             ],
+            "publish": "55414",
             "volumes": [{
                 "container": "/var/urbackup"
             }]
@@ -831,6 +855,7 @@
             "ports": [
                 "80/tcp"
             ],
+            "publish": "80",
             "volumes": [{
                     "container": "/data"
                 },
@@ -854,6 +879,7 @@
                 "name": "CFENGINE",
                 "set": "lucee@4.5"
             }],
+            "publish": "8080",
             "ports": [
                 "8080/tcp",
                 "8443/tcp"
@@ -886,6 +912,7 @@
                 "8080/tcp",
                 "8443/tcp"
             ],
+            "publish": "8080",
             "volumes": [{
                     "container": "/data/contentbox/db"
                 },
@@ -921,9 +948,10 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/openfaas.png",
             "repository": {
-                "url": "https://github.com/openfaas/faas",
-                "stackfile": "docker-compose.yml"
-            }
+                "url": "https://github.com/openfaas/faasd",
+                "stackfile": "docker-compose.yaml"
+            },
+            "publish": "8080"
         },
         {
             "type": 2,
@@ -938,7 +966,8 @@
             "repository": {
                 "url": "https://github.com/portainer/templates",
                 "stackfile": "stacks/ironfunctions/docker-stack.yml"
-            }
+            },
+            "publish": "8080"
         },
         {
             "type": 2,
@@ -953,7 +982,8 @@
             "repository": {
                 "url": "https://github.com/portainer/templates",
                 "stackfile": "stacks/cockroachdb/docker-stack.yml"
-            }
+            },
+            "publish": "8080"
         },
         {
             "type": 2,
@@ -973,7 +1003,8 @@
                 "name": "MYSQL_DATABASE_PASSWORD",
                 "label": "Database root password",
                 "description": "Password used by the MySQL root user."
-            }]
+            }],
+            "publish": "8080"
         },
         {
             "type": 3,
@@ -993,7 +1024,8 @@
                 "name": "MYSQL_DATABASE_PASSWORD",
                 "label": "Database root password",
                 "description": "Password used by the MySQL root user."
-            }]
+            }],
+            "publish": "80"
         },
         {
             "type": 2,
@@ -1067,6 +1099,7 @@
             "title": "Wordpress",
             "description": "Wordpress setup with a MySQL database",
             "note": "Deploys a Wordpress instance connected to a MySQL database.",
+            "publish": "80",
             "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/wordpress/edge/docker-stack.yml"
         },
         {
@@ -1074,7 +1107,8 @@
             "title": "CockroachDB",
             "description": "CockroachDB cluster",
             "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-            "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
+            "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml",
+            "publish": "8080"
         }
     ]
 }
