@@ -7,7 +7,7 @@ template:
       - logs:/var/log
       - www:/var/www
     networks:
-      - @public
+      - public
     ports:
       - 443:443
       - 80:80
