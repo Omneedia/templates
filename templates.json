@@ -103,9 +103,23 @@
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
             "image": "mysql:latest",
+            "command": "--default-authentication-plugin=mysql_native_password",
             "env": [{
                 "name": "MYSQL_ROOT_PASSWORD",
-                "label": "Root password"
+                "label": "Root password",
+                "preset": "0mneediaRulez!"
+            }, {
+                "name": "MYSQL_DATABASE",
+                "label": "Create a MySQL Database",
+                "preset": "demo"
+            }, {
+                "name": "MYSQL_USER",
+                "label": "Create a user. This user will be granted superuser permissions (see above) for the database specified by the MYSQL_DATABASE variable",
+                "preset": "player-one"
+            }, {
+                "name": "MYSQL_PASSWORD",
+                "label": "Create a user password",
+                "preset": "0mneediaRulez!"
             }],
             "ports": [
                 "3306/tcp"
@@ -125,8 +139,21 @@
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
             "image": "mariadb:latest",
             "env": [{
-                "name": "MYSQL_ROOT_PASSWORD",
-                "label": "Root password"
+                "name": "MARIADB_ROOT_PASSWORD",
+                "label": "Root password",
+                "preset": "0mneediaRulez!"
+            }, {
+                "name": "MARIADB_DATABASE",
+                "label": "Create a MySQL Database",
+                "preset": "demo"
+            }, {
+                "name": "MARIADB_USER",
+                "label": "Create a user. This user will be granted superuser permissions (see above) for the database specified by the MYSQL_DATABASE variable",
+                "preset": "player-one"
+            }, {
+                "name": "MARIADB_PASSWORD",
+                "label": "Create a user password",
+                "preset": "0mneediaRulez!"
             }],
             "ports": [
                 "3306/tcp"
@@ -147,11 +174,18 @@
             "image": "postgres:latest",
             "env": [{
                     "name": "POSTGRES_USER",
-                    "label": "Superuser"
+                    "label": "Superuser",
+                    "preset": "player-one"
                 },
                 {
                     "name": "POSTGRES_PASSWORD",
-                    "label": "Superuser password"
+                    "label": "Superuser password",
+                    "preset": "0mneediaRulez!"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "label": "PostGres database name",
+                    "preset": "demo"
                 }
             ],
             "ports": [
@@ -279,11 +313,13 @@
             "publish": "9000",
             "env": [{
                     "name": "MINIO_ACCESS_KEY",
-                    "label": "Minio access key"
+                    "label": "Minio access key",
+                    "preset": "my_key"
                 },
                 {
                     "name": "MINIO_SECRET_KEY",
-                    "label": "Minio secret key"
+                    "label": "Minio secret key",
+                    "preset": "0mneediaRulez!"
                 }
             ],
             "volumes": [{
@@ -311,11 +347,13 @@
             "publish": "8000",
             "env": [{
                     "name": "SCALITY_ACCESS_KEY",
-                    "label": "Scality S3 access key"
+                    "label": "Scality S3 access key",
+                    "preset": "my_key"
                 },
                 {
                     "name": "SCALITY_SECRET_KEY",
-                    "label": "Scality S3 secret key"
+                    "label": "Scality S3 secret key",
+                    "preset": "0mneediaRulez!"
                 }
             ],
             "volumes": [{
@@ -346,7 +384,8 @@
                 },
                 {
                     "name": "SA_PASSWORD",
-                    "label": "SA password"
+                    "label": "SA password",
+                    "preset": "0mneediaRulez!"
                 }
             ],
             "volumes": [{
