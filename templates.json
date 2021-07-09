@@ -545,7 +545,8 @@
                 },
                 {
                     "name": "JOOMLA_DB_PASSWORD",
-                    "label": "Database password"
+                    "label": "Database password",
+                    "preset": "0mneediaRulez!"
                 }
             ],
             "ports": [
@@ -629,7 +630,8 @@
                 },
                 {
                     "name": "MAUTIC_DB_PASSWORD",
-                    "label": "Database password"
+                    "label": "Database password",
+                    "preset": "0mneediaRulez!"
                 }
             ],
             "ports": [
@@ -729,11 +731,13 @@
                 },
                 {
                     "name": "USER",
-                    "label": "Database user"
+                    "label": "Database user",
+                    "preset": "player-one"
                 },
                 {
                     "name": "PASSWORD",
-                    "label": "Database password"
+                    "label": "Database password",
+                    "preset": "0mneediaRulez!"
                 }
             ],
             "ports": [
@@ -938,7 +942,8 @@
             "env": [{
                 "name": "MYSQL_DATABASE_PASSWORD",
                 "label": "Database root password",
-                "description": "Password used by the MySQL root user."
+                "description": "Password used by the MySQL root user.",
+                "preset": "0mneediaRulez!"
             }],
             "publish": "80"
         },
