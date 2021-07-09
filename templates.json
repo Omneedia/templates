@@ -12,7 +12,7 @@
             "logo": "https://omneedia.s3.fr-par.scw.cloud/logos/omneedia.png",
             "repository": {
                 "url": "https://github.com/omneedia/templates",
-                "stackfile": "stacks/omneedia-web/omneedia-web.yml"
+                "stackfile": "stacks/omneedia-core-web/omneedia-core-web.yml"
             }
         }, {
             "type": 1,
