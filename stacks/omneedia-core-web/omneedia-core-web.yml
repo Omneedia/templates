@@ -6,11 +6,6 @@ template:
       - certs:/etc/certs
       - logs:/var/log
       - www:/var/www
-    networks:
-      - public
-    ports:
-      - 443:443
-      - 80:80
     deploy:
       replica: 1
       node: manager
