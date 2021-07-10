@@ -1,6 +1,6 @@
 template:
   nginx:
-    image: omneedia/nginx:1.0.9
+    image: omneedia/nginx:1.0.10
     volumes:
       - etc:/etc/nginx
       - certs:/etc/certs
