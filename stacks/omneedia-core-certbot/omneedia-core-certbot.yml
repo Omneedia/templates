@@ -1,0 +1,9 @@
+template:
+  robocert:
+    image: adferrand/dnsrobocert
+    environment:
+      ROOT: /opt/dns
+      VERSION: latest
+    volumes:
+      - ${ROOT_CERTS}:/etc/letsencrypt
+      - ${ROOT_OMNEEDIA}/certs:/etc/dnsrobocert

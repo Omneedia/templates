@@ -15,6 +15,20 @@
                 "stackfile": "stacks/omneedia-core-web/omneedia-core-web.yml"
             }
         }, {
+            "type": 4,
+            "name": "omneedia-core-certbot",
+            "title": "omneedia certificate",
+            "description": "manage Let's Encrypt SSL certificates based on DNS challenges.",
+            "categories": [
+                "omneedia core packages"
+            ],
+            "platform": "linux",
+            "logo": "https://omneedia.s3.fr-par.scw.cloud/logos/omneedia.png",
+            "repository": {
+                "url": "https://github.com/omneedia/templates",
+                "stackfile": "stacks/omneedia-core-certbot/omneedia-core-certbot.yml"
+            }
+        }, {
             "type": 1,
             "title": "Registry",
             "description": "Docker image registry",
