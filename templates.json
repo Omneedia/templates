@@ -29,6 +29,20 @@
                 "stackfile": "stacks/omneedia-core-certbot/omneedia-core-certbot.yml"
             }
         }, {
+            "type": 4,
+            "name": "omneedia-core-registry",
+            "title": "omneedia registry",
+            "description": "Omneedia private registry.",
+            "categories": [
+                "omneedia core packages"
+            ],
+            "platform": "linux",
+            "logo": "https://omneedia.s3.fr-par.scw.cloud/logos/omneedia.png",
+            "repository": {
+                "url": "https://github.com/omneedia/templates",
+                "stackfile": "stacks/omneedia-core-registry/omneedia-core-registry.yml"
+            }
+        }, {
             "type": 1,
             "title": "Registry",
             "description": "Docker image registry",

@@ -1,0 +1,11 @@
+template:
+  app:
+    image: omneedia/registry:latest
+    publish:
+      uri: ${OMNEEDIA_URI}
+      port: 5000
+      ssl: 1
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - data:/data
