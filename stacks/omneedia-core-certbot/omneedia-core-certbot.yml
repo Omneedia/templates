@@ -5,5 +5,5 @@ template:
       ROOT: /etc/dnsrobocert
       VERSION: latest
     volumes:
-      - ${ROOT_CERTS}:/etc/letsencrypt
-      - ${ROOT_OMNEEDIA}/certs:/etc/dnsrobocert
+      - ${OMNEEDIA_ROOT_CERTS}:/etc/letsencrypt
+      - ${OMNEEDIA_ROOT_CONFIG}/certs:/etc/dnsrobocert

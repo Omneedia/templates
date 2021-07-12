@@ -7,9 +7,8 @@ template:
   app:
     image: omneedia/registry:1.1.0
     publish:
-      uri: ${OMNEEDIA_URI}
+      uri: ${OMNEEDIA_REGISTRY_URI}
       port: 5000
-      ssl: 1
     environment:
       REGISTRY_AUTH: htpasswd
       REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
