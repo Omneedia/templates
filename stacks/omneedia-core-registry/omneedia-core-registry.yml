@@ -1,11 +1,20 @@
+volume:
+  auth:
+    image: httpd:2
+    entrypoint: htpasswd
+    command: -Bbn ${OMNEEDIA_REGISTRY_USER} ${OMNEEDIA_REGISTRY_PASSWORD} > htpasswd
 template:
   app:
-    image: omneedia/registry:latest
+    image: omneedia/registry:1.1.0
     publish:
       uri: ${OMNEEDIA_URI}
       port: 5000
       ssl: 1
     environment:
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
       REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
     volumes:
+      - auth:/auth
       - data:/data
