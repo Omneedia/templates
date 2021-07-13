@@ -1,8 +1,9 @@
 volume:
   auth:
     image: httpd:2
+    mount: /etc
     entrypoint: htpasswd
-    command: -Bbn ${OMNEEDIA_REGISTRY_USER} ${OMNEEDIA_REGISTRY_PASSWORD} > htpasswd
+    command: -Bbn ${OMNEEDIA_REGISTRY_USER} ${OMNEEDIA_REGISTRY_PASSWORD} > /etc/htpasswd
 template:
   app:
     image: omneedia/registry:1.1.0
