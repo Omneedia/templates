@@ -1,6 +1,6 @@
 template:
   nginx:
-    image: omneedia/nginx:1.0.11
+    image: omneedia/nginx:1.0.10
     volumes:
       - etc:/etc/nginx
       - certs:/etc/certs
@@ -10,7 +10,7 @@ template:
       replica: 1
       node: manager
   ingress:
-    image: omneedia/ingress:1.3.0
+    image: omneedia/ingress:1.2.11
     volumes:
       - offline:/etc/offline
       - certs:/etc/certs
