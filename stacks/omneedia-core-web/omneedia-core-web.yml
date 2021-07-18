@@ -7,8 +7,13 @@ template:
       - logs:/var/log
       - www:/var/www
     deploy:
-      replica: 1
+      replica: ${REPLICA:-4}
       node: manager
+  robocert:
+    image: adferrand/dnsrobocert
+    volumes:
+      - certs:/etc/letsencrypt
+      - robocert:/etc/dnsrobocert
   ingress:
     image: omneedia/ingress:1.3.2
     volumes:
